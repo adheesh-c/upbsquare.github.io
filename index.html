@@ -13,7 +13,7 @@
                 background-image: url(https://jooinn.com/images/harbor-at-sunset-1.jpg);
                 background-repeat: no-repeat;
             }
-            .big_word{
+            #big_word{
                 color: white;
                 font-size: 100px;
                 text-align: center;
@@ -41,27 +41,37 @@
             }
             figcaption {
                 font-family: Rock Salt;
+                width: 300px;
             }
             .photogrid {
                 height: 300px;
                 width: 300px;
                 object-fit: cover;
             }
+            .header {
+                color: tomato;
+                font-family: Noto Serif;
+                postion: absolute;
+                font-size: 50px;
+                text-decoration: none;
+                top: 500px;
+                text-align: center;
+            }
         </style>
     </head>
   <body>
       <header>
-          <p class="big_word">The United Provinces</p>
+          <p id="big_word">The United Provinces</p>
           <nav></nav>
       </header>
       <main>
           <section>
-              <div><a href="news.html">Top news in the UP<a></div>
+              <div><a class="header" href="news.html">Top news in the UP<a></div>
                   <div> Remembering Pearl Harbor to Pentaganne with a visit from the US</div>
           </section>
           <section>
               <div class="big_word">Current UPB Leaders</div>
-              <img class="photogrid" src="https://lh3.googleusercontent.com/-sxTRYYGhhto/X7LJODPXScI/AAAAAAAAB7w/pFWDiDc8i7Yb6ONRyvKGAmMAXToqL1ZqgCK8BGAsYHg/s0/2020-11-16.png" alt="Adheesh Chincholi">
+              <img class="header" src="https://lh3.googleusercontent.com/-sxTRYYGhhto/X7LJODPXScI/AAAAAAAAB7w/pFWDiDc8i7Yb6ONRyvKGAmMAXToqL1ZqgCK8BGAsYHg/s0/2020-11-16.png" alt="Adheesh Chincholi">
               <figcaption>ADHEESH CHINCHOLI</figcaption>
           </section>        
       </main>
