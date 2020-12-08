@@ -3,65 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>UPB news</title>
-        <script>
-            // This is my javascript file for my web page project
-
-window.addEventListener("load", init);
-
-function init() {
-  initializeImages();
-  initModal();
-}
-
-function initializeImages() {
-  let figures = document.getElementsByTagName("figure");
-  //console.log(figures);
-  var len = figures.length;
-  for (let i = 0; i < len; i++) {
-    let figure = figures[i];
-    //console.log(figure);
-    let img = figure.children[0];
-    let figcaption = figure.children[1];
-    img.alt = figcaption.innerText;
-    img.title = figcaption.innerText;
-    //console.log(img);
-    //console.log(figcaption);
-  }
-}
-function initModal() {
-  // Get the <span> element that closes the modal
-  var span = document.getElementById("modalclose");
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
-}
-
-function initializeImages() {
-  let figures = document.getElementsByTagName("figure");
-  let len = figures.length;
-  for (let i = 0; i < len; i++) {
-    let figure = figures[i];
-    let img = figure.children[0];
-    let figcaption = figure.children[1];
-    img.alt = figcaption.innerText;
-    img.title = figcaption.innerText;
-    img.onclick = showModal;
-    console.log(img);
-    console.log(figcaption);
-  }
-}
-
-function showModal(event) {
-  var modal = document.getElementById("modal");
-  var modalImg = document.getElementById("modalimg");
-  var captionText = document.getElementById("modalcaption");
-  let img = event.target;
-  modal.style.display = "block";
-  modalImg.src = img.src;
-  captionText.innerHTML = img.alt;
-}
-        </script>
         <link rel="spreadsheet" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -112,7 +53,7 @@ function showModal(event) {
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 30px;
             }
-             #sec_2{
+             .sec_2{
                 color: tomato;
                 font-family: Noto Serif;
                 font-size: 50px;
@@ -133,22 +74,21 @@ function showModal(event) {
                 width: 300px;
                 object-fit: cover;
             }
-            #modal {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                padding: 10px 0;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-            }
             .photos {
                 background-color: navy;
                 height: 300px;
                 width: 100%;
                 object-fit: cover;
+            }
+            #cases {
+                color: white;
+            }
+            footer {
+                padding: 15px;
+                background-color: grey;
+            }
+            header {
+                position: fixed;
             }
         </style>
     </head>
@@ -163,7 +103,7 @@ function showModal(event) {
                   <div> Remembering Pearl Harbor to Pentaganne with a visit from the US</div>
           </section>
           <section>
-              <div id="sec_2">Current UPB Leaders</div>
+              <div class="sec_2">Current UPB Leaders</div>
               <div class="photogrid">
                   <figure><img class="photos" src="https://lh3.googleusercontent.com/-sxTRYYGhhto/X7LJODPXScI/AAAAAAAAB7w/pFWDiDc8i7Yb6ONRyvKGAmMAXToqL1ZqgCK8BGAsYHg/s0/2020-11-16.png" alt="Adheesh Chincholi"> 
                       <figcaption>ADHEESH CHINCHOLI, PRIME MINISTER</figcaption>
@@ -181,12 +121,15 @@ function showModal(event) {
                        <figcaption>ETHAN FERNANDEZ, P. OF SENATE</figcaption>
                   </figure>
               </div>
-          </section>        
-      </main>
-     <div id="modal">
-    <span id="modalclose">×</span>
-    <img id="modalimg">
-    <div id="modalcaption"></div>
-  </div>
+          </section>
+           <section>
+               <h1 class="sec_2">CORONAVIRUS CASES</h1>
+               <div id="cases">As of 08/12/20 10:27 am CST the UP, has 1 in 31 people have the virus</div>
+           </section
+          </main>
+              <footer>
+                  <h2>Join the UP as a citizen</h2>
+                  <div>©2018-2020</div>
+              </footer>
     </body> 
 </html>
