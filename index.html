@@ -36,8 +36,9 @@
                 color: white;
                 font-size: 20px; 
             }
-            img {
+            span img {
                 border: ridge;
+                margin: ;
             }
             figcaption {
                 font-family: Rock Salt;
@@ -52,6 +53,9 @@
                 width: 300px;
                 object-fit: cover;
                 margin-bottom: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 30px;
             }
              #sec_2{
                 color: tomato;
@@ -75,8 +79,11 @@
           </section>
           <section>
               <div id="sec_2">Current UPB Leaders</div>
-              <img class="photogrid" src="https://lh3.googleusercontent.com/-sxTRYYGhhto/X7LJODPXScI/AAAAAAAAB7w/pFWDiDc8i7Yb6ONRyvKGAmMAXToqL1ZqgCK8BGAsYHg/s0/2020-11-16.png" alt="Adheesh Chincholi">
-              <figcaption>ADHEESH CHINCHOLI</figcaption>
+              <div class="photogrid">
+                  <figure><img src="https://lh3.googleusercontent.com/-sxTRYYGhhto/X7LJODPXScI/AAAAAAAAB7w/pFWDiDc8i7Yb6ONRyvKGAmMAXToqL1ZqgCK8BGAsYHg/s0/2020-11-16.png" alt="Adheesh Chincholi"> 
+                      <figcaption>ADHEESH CHINCHOLI</figcaption>
+                  </figure>
+              </div>
           </section>        
       </main>
     </body> 
