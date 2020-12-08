@@ -73,6 +73,17 @@
                 width: 300px;
                 object-fit: cover;
             }
+            #modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding: 10px 0;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+            }
         </style>
     </head>
   <body>
@@ -106,5 +117,10 @@
               </div>
           </section>        
       </main>
+     <div id="modal">
+    <span id="modalclose">×</span>
+    <img id="modalimg">
+    <div id="modalcaption"></div>
+  </div>
     </body> 
 </html>
